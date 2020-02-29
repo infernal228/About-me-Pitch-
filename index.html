@@ -17,10 +17,10 @@
           <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
           <div class="overlay-content">
             <a href="#">Home</a>
-            <a href="#">About me</a>
-            <a href="#">Skills</a>
-            <a href="#">Portfolio</a>
-            <a href="#">Contacts</a>
+            <a onclick=" slowScroll('#aboutme')">About me</a>
+            <a onclick=" slowScroll('#skills')">Skills</a>
+            <a onclick=" slowScroll('#portfolio')">Portfolio</a>
+            <a onclick=" slowScroll('#contacts')">Contacts</a>
           </div>
         </div>
         <span class="mob-span" style="font-size: 30px;cursor:pointer" onclick="openNav()"> &#9776;</span>
@@ -30,16 +30,16 @@
               Home
             </li>
             <li class="menu-list-item">
-              About Me
+              <a onclick=" slowScroll('#aboutme')">About me</a>
             </li>
             <li class="menu-list-item">
-              Skills
+              <a onclick=" slowScroll('#skills')">Skills</a>
             </li>
             <li class="menu-list-item">
-              Portfolio
+              <a onclick=" slowScroll('#portfolio')">Portfolio</a>
             </li>
             <li class="menu-list-item">
-              Contacts
+              <a onclick=" slowScroll('#contacts')">Contacts</a>
             </li>
           </ul>
         </nav>
@@ -64,7 +64,7 @@
     </header>
     <section class="main-info">
       <div class="container">
-        <div class="about-me">
+        <div id="aboutme" class="about-me">
           <h1>About Me</h1>
           <p>Hi, I`m Daniel - Front-end Developer from Ukraine, Lviv. <br> Study at the Lyceum №37. I train boxing,
             swimming and going to the gym.</p>
@@ -75,7 +75,7 @@
         </div>
       </div>
     </section>
-    <section class="sec-info">
+    <section id="skills" class="sec-info">
       <div class="container">
         <div class="sec-text">
           <h1>Skills</h1>
@@ -125,7 +125,7 @@
         </div>
       </div>
     </section>
-    <section class="sec-port">
+    <section id="portfolio" class="sec-port">
       <div class="container">
         <div class="wrapper-port">
           <div class="port-img">
@@ -144,7 +144,7 @@
         </div>
       </div>
     </section>
-    <footer class="foot-info">
+    <footer id="contacts" class="foot-info">
       <div class="container">
         <div class="wrapper-contacts">
           <div class="first-block">
@@ -174,6 +174,17 @@
       document.getElementById("myNavMob").style.width = "0%";
     }
   </script>
+  <script>
+    function slowScroll(id) {
+      var offset = 0;
+      $('html,body').animate({
+        scrollTop: $(id).offset().top - offset
+      }, 1000);
+      return false;
+    }
+  </script>
+  <script src="https://code.jquery.com/jquery-3.4.1.min.js"
+    integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
 </body>
 
 </html>
