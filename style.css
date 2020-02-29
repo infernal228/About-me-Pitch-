@@ -203,7 +203,6 @@ hr {
   flex-flow: row;
   justify-content: space-around;
   align-items: center;
-  padding: 100px;
 }
 
 .skill div {
@@ -555,20 +554,17 @@ hr {
     max-width: 100%;
   }
 
+  .wrapper-port {
+    padding: 0;
+  }
+
   .port-text {
     margin-bottom: 10px;
   }
 
-  .wrapper-skills {
-    padding: 50px;
-  }
-
-  .port-img {
-    padding: 20px;
-  }
-
   .port-img img {
     max-width: 100%;
+    width: 100%;
   }
 
   .sec-block {
@@ -696,12 +692,12 @@ hr {
     max-width: 100%;
   }
 
-  .port-text {
-    margin-bottom: 10px;
+  .wrapper-port {
+    padding: 0;
   }
 
-  .wrapper-skills {
-    padding: 50px;
+  .port-text {
+    margin-bottom: 10px;
   }
 
   .port-img img {
