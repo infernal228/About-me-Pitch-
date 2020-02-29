@@ -707,6 +707,7 @@ hr {
   }
 
   .port-img img {
+    width: 100%;
     max-width: 100%;
   }
 
