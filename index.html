@@ -4,7 +4,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>I`m Beautiful</title>
+  <title>About me</title>
   <link rel="stylesheet" href="style.css" />
   <link rel="stylesheet" href="./fontawesome-free-5.11.2-web/css/all.css" />
 </head>
@@ -13,6 +13,17 @@
   <div id="page">
     <div class="container">
       <header>
+        <div id="myNavMob" class="overlay">
+          <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+          <div class="overlay-content">
+            <a href="#">Home</a>
+            <a href="#">About me</a>
+            <a href="#">Skills</a>
+            <a href="#">Portfolio</a>
+            <a href="#">Contacts</a>
+          </div>
+        </div>
+        <span class="mob-span" style="font-size: 30px;cursor:pointer" onclick="openNav()"> &#9776;</span>
         <nav>
           <ul class="menu-list">
             <li class="menu-list-item active">
@@ -154,6 +165,15 @@
       </div>
     </footer>
   </div>
+  <script>
+    function openNav() {
+      document.getElementById("myNavMob").style.width = "100%";
+    }
+
+    function closeNav() {
+      document.getElementById("myNavMob").style.width = "0%";
+    }
+  </script>
 </body>
 
 </html>
