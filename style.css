@@ -175,6 +175,7 @@ hr {
   width: 100%;
   display: flex;
   flex-flow: column;
+  padding: 50px;
 }
 
 .sec-text {
